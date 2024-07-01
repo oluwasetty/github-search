@@ -1,6 +1,6 @@
 // import { HeartIcon } from "@heroicons/react/24/solid";
 
-export function Footer() {
+export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (

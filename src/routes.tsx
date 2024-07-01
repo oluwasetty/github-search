@@ -1,17 +1,17 @@
-import { Home } from "./pages";
+import { Search } from "./pages";
 
 export const routes = [
   {
     name: "Home",
-    path: "/search",
-    element: <Home />,
-    isActive: true
-  },
-  {
-    name: "Other Page",
-    path: "/other-page",
+    path: "/home",
     element: <></>,
     isActive: false
+  },
+  {
+    name: "Search",
+    path: "/search",
+    element: <Search />,
+    isActive: true
   }
 ];
 

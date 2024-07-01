@@ -4,7 +4,7 @@ import { SearchResultProps } from "../../interface";
 import { useSearchDataContext } from "../../pages";
 import { EnvelopeIcon, UsersIcon } from '@heroicons/react/24/outline'
 
-export function SearchResult(result: SearchResultProps) {
+export const SearchResult = (result: SearchResultProps) => {
 
   const { data, setData } = useSearchDataContext();
 

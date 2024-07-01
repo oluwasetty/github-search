@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { SearchResultListProps } from "../../interface";
 import SearchResult from "./search-result";
 
-export function SearchResultList({ results, loading, error }: SearchResultListProps ) {
+export const SearchResultList = ({ results, loading, error }: SearchResultListProps ) => {
   return (
     <>
       {results !== null && results !==  undefined && results?.length > 0 && error === null && loading === false && <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -34,6 +34,7 @@ export function SearchResultList({ results, loading, error }: SearchResultListPr
         <div className="load-wraper">
           <div className="activity"></div>
         </div>
+        <span style={{ color: 'transparent' }}>loading</span>
       </div>
       }
 

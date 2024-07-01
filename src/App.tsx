@@ -2,7 +2,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Navbar, Footer } from "./widgets/layout";
 import routes from "./routes";
 
-function App() {
+const App = () => {
   const { pathname } = useLocation();
 
   return (

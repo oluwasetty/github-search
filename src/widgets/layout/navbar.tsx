@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { NavbarProps } from "../../interface";
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon, UserIcon} from '@heroicons/react/24/outline'
+import { Link } from "react-router-dom";
 
 
 const userNavigation = [
@@ -11,21 +12,13 @@ const userNavigation = [
   { name: 'Register', href: '#' }
 ]
 
-function classNames(...classes: string[]) {
+const classNames = (...classes: string[]) => {
   return classes.join(' ')
 }
 
-export function Navbar({ routes, action }: NavbarProps) {
+export const Navbar = ({ routes, action }: NavbarProps) => {
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
           {({ open }) => (
@@ -43,9 +36,9 @@ export function Navbar({ routes, action }: NavbarProps) {
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {routes.map((item) => (
-                          <a
+                          <Link
                             key={item.name}
-                            href={item.href}
+                            to={item.path}
                             className={classNames(
                               item.isActive
                                 ? 'bg-gray-900 text-white'
@@ -55,7 +48,7 @@ export function Navbar({ routes, action }: NavbarProps) {
                             aria-current={item.isActive ? 'page' : undefined}
                           >
                             {item.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -168,15 +161,6 @@ export function Navbar({ routes, action }: NavbarProps) {
             </>
           )}
         </Disclosure>
-
-        {/* <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-          </div>
-        </header>
-        <main>
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8"></div>
-        </main> */}
       </div>
     </>
   )

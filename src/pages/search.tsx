@@ -19,7 +19,7 @@ const SearchDataContext = createContext<SearchResultState>({ data: defaultData, 
 
 export const useSearchDataContext = () => useContext<SearchResultState>(SearchDataContext)
 
-export function Home() {
+export const Search = () => {
   const [search, setSearch] = useSearchParamsState("q", "");
   const [searchType, setSearchType] = useState<string>(SearchType.User)
   const [data, setData] = useState<SearchResultListProps>(defaultData);
@@ -114,4 +114,4 @@ export function Home() {
   );
 }
 
-export default Home;
+export default Search;

@@ -1,12 +1,12 @@
 import { useSearchParams } from "react-router-dom";
 
-export function useSearchParamsState(
+export const useSearchParamsState = (
     searchParamName: string,
     defaultValue: string
 ): readonly [
     searchParamsState: string,
     setSearchParamsState: (newState: string) => void
-] {
+] => {
     const [searchParams, setSearchParams] = useSearchParams();
 
     const acquiredSearchParam = searchParams.get(searchParamName);

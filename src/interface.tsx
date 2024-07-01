@@ -43,5 +43,3 @@ export interface SearchResultListProps {
   loading: boolean;
   error: string | null;
 }
-
-// export 
