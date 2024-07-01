@@ -20,7 +20,7 @@ function App() {
               ({ path, element }, key) =>
                 element && <Route key={key} path={path} element={element} />
             )}
-            <Route path="*" element={<Navigate to="/home" replace />} />
+            <Route path="*" element={<Navigate to="/search" replace />} />
           </Routes></div>
       </main>
       {!(pathname === '/sign-in' || pathname === '/sign-up') && (

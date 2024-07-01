@@ -3,7 +3,7 @@ import { Home } from "./pages";
 export const routes = [
   {
     name: "Home",
-    path: "/",
+    path: "/search",
     element: <Home />,
     isActive: true
   },

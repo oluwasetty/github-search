@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import { SearchResultProps, SearchType } from "../../interface";
+import { SearchResultProps } from "../../interface";
 import { useSearchDataContext } from "../../pages";
 import { EnvelopeIcon, UsersIcon } from '@heroicons/react/24/outline'
 
@@ -65,7 +65,7 @@ SearchResult.propTypes = {
   avatar_url: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   html_url: PropTypes.string.isRequired,
-  type: SearchType,
+  type: PropTypes.string,
   details: PropTypes.object
 };
 
